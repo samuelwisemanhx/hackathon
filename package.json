@@ -1,0 +1,21 @@
+{
+  "name": "hxgcpsvapppoc",
+  "version": "1.0.0",
+  "description": "A SvelteKit demo app with Node adapter and SSR",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@sveltejs/adapter-node": "^5.0.0",
+    "@sveltejs/kit": "^2.0.0",
+    "svelte": "^5.0.0",
+    "vite": "^6.0.0"
+  }
+}

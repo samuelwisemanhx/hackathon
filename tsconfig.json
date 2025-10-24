@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"verbatimModuleSyntax": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"lib": ["esnext", "DOM", "DOM.Iterable"],
+		"moduleResolution": "bundler",
+		"module": "esnext",
+		"target": "esnext",
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"strict": true
+	},
+	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"]
+}
