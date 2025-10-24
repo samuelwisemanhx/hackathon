@@ -40,15 +40,42 @@ tsconfig.json              # TypeScript configuration
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm
+- PostgreSQL 15+ (for database functionality)
 
 ### Installation
 
-Dependencies are already installed. If needed, run:
+1. Install dependencies:
 
 ```bash
 npm install
+```
+
+2. Set up PostgreSQL database:
+
+```bash
+# Create the database
+createdb ai_assessment
+
+# Or using psql
+psql -U postgres -c "CREATE DATABASE ai_assessment;"
+```
+
+3. Configure environment variables:
+
+```bash
+# Copy the example environment file
+cp .env.example .env
+
+# Edit .env with your database credentials
+# Update DB_PASSWORD with your PostgreSQL password
+```
+
+4. Push the database schema:
+
+```bash
+npm run db:push
 ```
 
 ### Development
@@ -60,6 +87,24 @@ npm run dev
 ```
 
 The app will be available at `http://localhost:5173`
+
+### Database Commands
+
+```bash
+npm run db:generate  # Generate migration from schema changes
+npm run db:push      # Push schema to database (development)
+npm run db:studio    # Open Drizzle Studio (database GUI)
+```
+
+### Health Check
+
+Verify your database connection:
+
+```bash
+curl http://localhost:5173/api/health
+```
+
+Or visit `http://localhost:5173/api/health` in your browser.
 
 ### Building
 
